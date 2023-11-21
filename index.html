@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lighthouse Island Bistro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Adjust the number of columns as needed */
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        .flexcontainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Adjust the number of columns as needed */
+            grid-template-rows: auto;
+            grid-template-areas:
+                "nav"
+                "main"
+                "aside";
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    
+        @media screen and (max-width: 480px) {
+            nav {
+                background-color: lightblue;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 10px;
+                width: 100%;
+            }
+
+            ul {
+                width: 100%;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            li {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            nav {
+                background-color: palevioletred;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                width: 100%;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            .flexcontainer {
+                display: flex;
+                flex-direction: row;
+            }
+
+            main {
+                flex: 2;
+                /* Main will take 2/3 of the available space */
+            }
+
+            aside {
+                flex: 1;
+                /* Aside will take 1/3 of the available space */
+            }
+
+        }
+
+        @media screen {
+            header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5em;
+    background-color: #89a0ca;
+}
+
+nav {
+    background-color: palevioletred;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    border: 1px solid white;
+    margin-bottom: 5px;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #89a0ca;
+}
+
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #89a0ca;
+    padding: 10px;
+}
+}
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <header><img src="images/lighthouselogo.jpg" alt="lighthouselogo">
+        Lighthouse Island Bistro</header>
+
+    <div class="flexcontainer">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="webpages/menu.html">Menu</a></li>
+                <li><a href="webpages/directions.html">Directions</a></li>
+                <li><a href="webpages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h3>Locally Roasted Free-Trade Coffee</h3>
+            <p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot or cold.</p>
+
+            <h3>Specialty Pastries</h3>
+            <p>Enjoy a selection of our freshly baked, organic pastries, including fresh-fruit muffins, scones,
+                croissants, and cinnamon rolls.</p>
+
+            <h3>Lunchtime is Anytime</h3>
+            <p>Savor delicious wraps and sandwiches on hearty whole-grain breads with locally grown salad, fruit, and
+                vegetables</p>
+
+            <h3>Panoramic View</h3>
+            <p>Take in some scenery!</p>
+            <p>The top of our lighthouse offers a panoramic view of the countryside. Challenge your friends to climb our
+                100-stair tower.</p>
+
+        </main>
+
+        <aside>
+            <img src="images/lighthouseisland.jpg" alt="lighthouseisland">
+        </aside>
+    </div>
+
+    <footer>
+        Copyright 2015
+    </footer>
+</body>
+
+</html>
